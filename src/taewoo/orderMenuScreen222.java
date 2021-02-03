@@ -14,6 +14,7 @@ import javax.swing.SwingConstants;
 import javax.swing.ButtonGroup;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionEvent;
 
 public class orderMenuScreen222 extends JPanel {
 
@@ -40,20 +41,13 @@ public class orderMenuScreen222 extends JPanel {
 
 
 
-		JButton btn1 = new JButton("추가");
-		btn1.setBounds(122, 131, 57, 23);
-		btn1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		setLayout(null);
-		this.add(btn1);
+	
 
 	
 
 
 		JRadioButton sizeS = new JRadioButton("S");
-		sizeS.setBounds(241, 424, 33, 23);
+		sizeS.setBounds(120, 60, 33, 23);
 		buttonGroup.add(sizeS);
 		sizeS.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(sizeS);
@@ -62,137 +56,145 @@ public class orderMenuScreen222 extends JPanel {
 
 
 		JRadioButton sizeM = new JRadioButton("M");
-		sizeM.setBounds(279, 424, 37, 23);
+		sizeM.setBounds(160, 60, 37, 23);
 		buttonGroup.add(sizeM);
 		this.add(sizeM);
 		sizeM.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(sizeM);
 
 		JRadioButton sizeL = new JRadioButton("L");
-		sizeL.setBounds(321, 424, 33, 23);
+		sizeL.setBounds(200, 60, 33, 23);
 		buttonGroup.add(sizeL);
 		this.add(sizeL);
 		sizeL.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(sizeL);
 
 		Button mypage = new Button("My Page");
-		mypage.setBounds(401, 67, 60, 23);
+		mypage.setBounds(470, 20, 100, 50);
 		this.add(mypage);
 
-		JButton btn2 = new JButton("추가");
-		btn2.setBounds(220, 116, 57, 23);
+		Button logout = new Button("Logout");
+		logout.setBounds(470, 70, 100, 50);
+		this.add(logout);
+		
+		JButton btn1 = new JButton("주문");
+		btn1.setBounds(20, 200, 100, 50);
+		btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		setLayout(null);
+		this.add(btn1);
+		
+		JButton btn2 = new JButton("주문");
+		btn2.setBounds(170, 200, 100, 50);
 		this.add(btn2);
 
-		JButton btn3 = new JButton("추가");
-		btn3.setBounds(297, 116, 57, 23);
+		JButton btn3 = new JButton("주문");
+		btn3.setBounds(320, 200, 100, 50);
 		this.add(btn3);
 
-		JButton btn4 = new JButton("추가");
-		btn4.setBounds(373, 116, 57, 23);
+		JButton btn4 = new JButton("주문");
+		btn4.setBounds(470, 200, 100, 50);
 		this.add(btn4);
 
-		JButton btn5 = new JButton("추가");
-		btn5.setBounds(162, 234, 57, 23);
+		JButton btn5 = new JButton("주문");
+		btn5.setBounds(20, 300, 100, 50);
 		this.add(btn5);
 
-		JButton btn6 = new JButton("추가");
-		btn6.setBounds(220, 252, 57, 23);
+		JButton btn6 = new JButton("주문");
+		btn6.setBounds(170, 300, 100, 50);
 		this.add(btn6);
 
-		JButton btn7 = new JButton("추가");
-		btn7.setBounds(321, 234, 57, 23);
+		JButton btn7 = new JButton("주문");
+		btn7.setBounds(320, 300, 100, 50);
 		this.add(btn7);
 
-		JButton btn8 = new JButton("추가");
-		btn8.setBounds(401, 234, 57, 23);
+		JButton btn8 = new JButton("주문");
+		btn8.setBounds(470, 300, 100, 50);
 		this.add(btn8);
 
 		JLabel Label1 = new JLabel("아메리카노");
-		Label1.setBounds(119, 199, 60, 15);
+		Label1.setBounds(40, 180, 65, 15);
 		Label1.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(Label1);
 
 		JLabel Label2 = new JLabel("라떼");
-		Label2.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-			}
-		});
-		Label2.setBounds(241, 199, 24, 15);
+		Label2.setBounds(190, 180, 65, 15);
 		Label2.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(Label2);
 
 		JLabel Label3 = new JLabel("더치커피");
-		Label3.setBounds(306, 164, 48, 15);
+		Label3.setBounds(340, 180, 70, 15);
 		Label3.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(Label3);
 
 		JLabel Label4 = new JLabel("카페모카");
-		Label4.setBounds(387, 164, 48, 15);
+		Label4.setBounds(490, 180, 70, 15);
 		Label4.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(Label4);
 
 		JLabel Label5 = new JLabel("모히또");
-		Label5.setBounds(183, 278, 36, 15);
+		Label5.setBounds(40, 280, 70, 15);
 		Label5.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(Label5);
 
 		JLabel Label6 = new JLabel("오랜지");
-		Label6.setBounds(241, 303, 36, 15);
+		Label6.setBounds(190, 280, 70, 15);
 		Label6.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(Label6);
 
 		JLabel Label7 = new JLabel("망고");
-		Label7.setBounds(330, 303, 24, 15);
+		Label7.setBounds(340, 280, 70, 15);
 		Label7.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(Label7);
 
 		JLabel Label8 = new JLabel("딸기");
-		Label8.setBounds(406, 303, 24, 15);
+		Label8.setBounds(490, 280, 70, 15);
 		Label8.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(Label8);
 
 		JRadioButton temperature1 = new JRadioButton("HOT");
-		temperature1.setBounds(128, 424, 51, 23);
+		temperature1.setBounds(120, 20, 50, 25);
 		buttonGroup.add(temperature1);
 		this.add(temperature1);
 		temperature1.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(temperature1);
 
 		JRadioButton temperature2 = new JRadioButton("ICED");
-		temperature2.setBounds(184, 424, 53, 23);
+		temperature2.setBounds(170, 20, 60, 25);
 		buttonGroup.add(temperature2);
 		this.add(temperature2);
 		temperature2.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(temperature2);
 
-		JLabel Label9 = new JLabel("온도");
-		Label9.setBounds(183, 365, 40, 24);
+		JLabel Label9 = new JLabel("온도 :");
+		Label9.setBounds(20, 20, 100, 24);
 		Label9.setHorizontalAlignment(SwingConstants.CENTER);
 		Label9.setFont(new Font("굴림", Font.PLAIN, 20));
 		this.add(Label9);
 
-		JLabel Label10 = new JLabel("사이즈");
-		Label10.setBounds(268, 365, 60, 24);
+		JLabel Label10 = new JLabel("사이즈 :");
+		Label10.setBounds(20, 60, 100, 24);
 		Label10.setHorizontalAlignment(SwingConstants.CENTER);
 		Label10.setFont(new Font("굴림", Font.PLAIN, 20));
 		this.add(Label10);
 
-		JLabel Label11 = new JLabel("샷추가");
-		Label11.setBounds(386, 375, 60, 24);
+		JLabel Label11 = new JLabel("샷추가 :");
+		Label11.setBounds(20, 100, 100, 24);
 		Label11.setHorizontalAlignment(SwingConstants.CENTER);
 		Label11.setFont(new Font("굴림", Font.PLAIN, 20));
 		this.add(Label11);
 
 		JRadioButton buttonYes = new JRadioButton("YES");
-		buttonYes.setBounds(373, 424, 49, 23);
+		buttonYes.setBounds(120, 100, 49, 23);
 		buttonGroup.add(buttonYes);
 		this.add(buttonYes);
 		buttonYes.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(buttonYes);
 
 		JRadioButton buttonNo = new JRadioButton("NO");
-		buttonNo.setBounds(426, 424, 43, 23);
+		buttonNo.setBounds(170, 100, 43, 23);
 		buttonGroup.add(buttonNo);
 		this.add(buttonNo);
 		buttonNo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -292,7 +294,21 @@ public class orderMenuScreen222 extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf));
 				}
+				
+			
 			
 		});
+		
+		mypage.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+//				ChangePanel.ordermenuToMyPage(mf, , (mf));
+				}
+				
+			
+			
+		});
+
 	}
 }
