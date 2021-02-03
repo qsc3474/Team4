@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 
 public class ChangePanel {
 	
+	/* 메인에서 회원가입 */
 	public static void mainToRegisterPanel(MainFrame mf, JPanel main, JPanel willChange) {
 		
 		
@@ -13,6 +14,7 @@ public class ChangePanel {
 		
 	}
 	
+	/* 회원가입에서 메인으로 */
 	public static void registerToMain (MainFrame mf, JPanel register, JPanel main) {
 		mf.remove(register);
 		mf.add(main);
@@ -20,6 +22,7 @@ public class ChangePanel {
 		
 	}
 
+	/* 메인에서 매니져 로그인 시 */
 	public static void mainToManagerPanel(MainFrame mf, JPanel mainPanel, JPanel Manager) {
 		// TODO Auto-generated method stub
 		
@@ -28,6 +31,7 @@ public class ChangePanel {
 		mf.repaint();
 	}
 	
+	/* 이름매칭 후 비밀번호 수정 */
 	public static void modifiedToChangePwd(MainFrame mf, JPanel mypage,JPanel modified_1, JPanel ChangePwd) {
 		mf.add(ChangePwd);
 		mf.add(modified_1);
@@ -56,5 +60,28 @@ public class ChangePanel {
 		mf.repaint();
 	}
 	
+
+
+	public static void mypageToWithdraw(MainFrame mf, JPanel mypage, JPanel withdrawPanel) {
+		// TODO Auto-generated method stub
+		mf.add(withdrawPanel);
+		mf.remove(mypage);
+		mf.repaint();
+	}
+
+	public static void WithdrawPanelToMyPage(MainFrame mf, WithdrawPanel withdrawPanel, JPanel willChange) {
+		// TODO Auto-generated method stub
+		mf.add(willChange);
+		mf.remove(withdrawPanel);
+		mf.repaint();
+	}
+
+	public static void withdrawToMainpanel(MainFrame mf, JPanel withdrawPanel, JPanel mainPanel) {
+		// TODO Auto-generated method stub
+		mf.add(mainPanel);
+		mf.add(withdrawPanel);
+		mf.repaint();
+		
+	}
 
 }

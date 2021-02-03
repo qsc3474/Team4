@@ -111,7 +111,7 @@ public class Mypage extends JPanel{
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				ChangePanel.modifiedToChangePwd(mf, mypage, new MainPanel(mf), mypage);
+				ChangePanel.mypageToWithdraw(mf, mypage, new WithdrawPanel(mf));
 			}
 		});
 		

@@ -6,11 +6,13 @@ import javax.swing.JOptionPane;
 
 
 
+
+
 public class MemberCheck {
 
 	static MemberDB memberdb = new MemberDB();
 	ArrayList<MemberDTO> outputMembers = new ArrayList<>();	// 회원정보를 담을 arraylist 생성
-	
+
 	public static MemberDTO mem = null; 
 
 	/* GUI 아이디 중복체크 */
@@ -74,9 +76,9 @@ public class MemberCheck {
 
 				JOptionPane.showMessageDialog(null, "로그인을 축하합니다.");
 				islogin= true;
-				
+
 				mem = memberdb.checkMethod().get(i);
-				
+
 				break;
 			}
 
@@ -102,19 +104,73 @@ public class MemberCheck {
 
 		return islogin;
 	}
-	
+
 	/* 회원가입시 빈칸 확인 */
 	public static boolean blank (String id, String pwd, String pwdDoubleCheck, String name, String year, String month, String day, String email) {
 		boolean isBlank = true;
-		
+
 		if(id.isBlank() || pwd.isBlank() || pwdDoubleCheck.isBlank() || name.isBlank() || year.isBlank() ||
-					month.isBlank() || day.isBlank() || email.isBlank()) {
-			
+				month.isBlank() || day.isBlank() || email.isBlank()) {
+
 			JOptionPane.showMessageDialog(null, "공란이 있습니다. 공란을 작성하여주세요.");
-			
+
 			isBlank = false;
 		}
-	
+
 		return isBlank;
 	}
+
+	public void withdrawIdCheck (String idcheck, String withdrawCheck) {
+
+		MemberDB memberdb = new MemberDB();
+
+		ArrayList<MemberDTO> withdraw = new ArrayList<>();
+		withdraw = new MemberDB().checkMethod();
+	
+//		if(withdrawCheck.equals("탈퇴") && idcheck ) {
+//			
+//			
+//		}
+		for(int i = 0; i < outputMembers.size(); i ++) {
+			System.out.println("들어가있니" + outputMembers);
+			
+			if((idcheck.equals(outputMembers.get(i).getId())) && withdrawCheck.equals("탈퇴") ){
+				
+				outputMembers.remove(i);
+				
+				JOptionPane.showMessageDialog(null, "으응");
+				System.out.println(outputMembers.toString());
+				break;
+			}
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+//		for (int a = 0; a < outputMembers.size(); a++) {
+//
+//			if (idcheck.equals(outputMembers.get(a).getId()) && withdrawCheck.equals(outputMembers)) {
+//				
+//				
+//				
+//				
+//				outputMembers.remove(a);
+//				JOptionPane.showMessageDialog(null, "탈퇴가 완료되었습니다. 감사합니다.");
+//				//					System.out.println(outputMembers);
+//				break;
+//			}
+//			else {
+//
+//				JOptionPane.showMessageDialog(null, "회원정보가 없습니다.");
+//				break;
+//
+//			}
+//
+//		}
+
 	}
+}
