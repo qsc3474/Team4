@@ -13,6 +13,7 @@ public class MainFrame extends JFrame{
 		new MainPanel(this);
 		
 		this.setVisible(true);
+		this.setResizable(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}

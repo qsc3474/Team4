@@ -1,19 +1,13 @@
 package newSwing_ys;
 
-//import com.greedy.section03.change.MainFrame;
 
 public class Applicatioin {
 
 	public static void main(String[] args) {
 		
+		/* 프레임 생성 */
 		new MainFrame();
-//		RegisterPanel regispanel = new RegisterPanel();
-//		regispanel.initialize();
-		
-//		MainPanel main = new MainPanel();
-//		main.MainPanel();
 
-		
 		
 	}
 
