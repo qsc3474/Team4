@@ -14,6 +14,7 @@ import javax.swing.SwingConstants;
 import javax.swing.ButtonGroup;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
 public class orderMenuScreen222 extends JPanel {
@@ -22,7 +23,7 @@ public class orderMenuScreen222 extends JPanel {
 	private MainFrame mf;
 	private JPanel ordermenu;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-
+	private OrderDTO2 odt = new OrderDTO2(); 
 
 
 	public  orderMenuScreen222 (MainFrame mf) {
@@ -227,6 +228,11 @@ public class orderMenuScreen222 extends JPanel {
 		ordermenu.add(buttonYes);
 		
 		
+		JPanel resultPanel = new JPanel();
+		JLabel text = new JLabel("테스트 출력용");
+		resultPanel.add(text);
+		mf.add(resultPanel, "South");
+		
 
 		mf.getContentPane().add(ordermenu);
 		
@@ -234,7 +240,14 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf));
+				
+				ArrayList<String> personalOrder = new ArrayList<>();
+				
+				
+				
+//				OrderCHEC.ameorder(size, temperature, shot);
+				
+				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
 		});
@@ -244,7 +257,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf));
+				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
 		});
@@ -252,7 +265,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf));
+				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
 		});
@@ -260,7 +273,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf));
+				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
 		});
@@ -268,7 +281,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf));
+				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
 		});
@@ -276,7 +289,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf));
+				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
 		});
@@ -284,7 +297,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf));
+				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
 		});
@@ -298,6 +311,71 @@ public class orderMenuScreen222 extends JPanel {
 			
 			
 		});
+		
+		sizeS.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				text.setText("Small size가 선택되었습니다.");
+				odt.setSize("Small size가 선택되었습니다.");
+			}
+		});
+		
+		sizeM.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				text.setText("Medium size가 선택되었습니다.");
+				odt.setSize("Medium size가 선택되었습니다.");
+			}
+		});
+		
+		sizeL.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				odt.setSize("Large size가 선택되었습니다.");
+				text.setText("Large size가 선택되었습니다.");
+	
+			}
+		});
+		
+		temperature1.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				text.setText("HOT 입니다.");
+				odt.setTemperature("HOT 입니다.");
+			}
+		});
+		
+		temperature2.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				text.setText("ICED 입니다.");
+				odt.setTemperature("ICED 입니다.");
+			}
+		});
+		
+		buttonNo.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				text.setText("Shot 추가 No 입니다.");
+				odt.setShot("NO 입니다.");
+			}
+		});
+		
+		buttonYes.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				text.setText("Shot 추가 Yes입니다");
+				odt.setShot("YES 입니다.");
+			}
+		});
+		
 		
 		mypage.addActionListener(new ActionListener() {
 			
