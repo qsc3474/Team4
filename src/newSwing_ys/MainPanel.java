@@ -31,7 +31,7 @@ public class MainPanel extends JPanel{
 	public MainPanel (MainFrame mf) {
 		this.mf = mf;
 		this.mainPanel = this;
-		this.setSize(1000, 700);
+		this.setSize(1129, 781);
 
 		this.setLayout(null);
 
@@ -78,6 +78,10 @@ public class MainPanel extends JPanel{
 		this.add(loginButton);
 		this.add(registerButton);
 		this.add(pwdField);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(269, 181, 481, 404);
+		add(panel);
 
 
 
@@ -123,5 +127,4 @@ public class MainPanel extends JPanel{
 		mf.getContentPane().add(mainPanel);
 
 	}
-
 }
