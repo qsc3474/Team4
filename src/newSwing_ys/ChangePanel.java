@@ -4,11 +4,11 @@ import javax.swing.JPanel;
 
 public class ChangePanel {
 	
-	public static void mainToRegisterPanel(MainFrame mf, JPanel main, JPanel register) {
+	public static void mainToRegisterPanel(MainFrame mf, JPanel main, JPanel willChange) {
 		
 		
 		mf.remove(main);
-		mf.add(register);
+		mf.add(willChange);
 		mf.repaint();
 		
 	}

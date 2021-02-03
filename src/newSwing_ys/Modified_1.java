@@ -29,32 +29,34 @@ public class Modified_1 extends JPanel{
 		this.modified_1 = this;		
 		this.setSize(1000, 700);
 		this.setLayout(null);
-		
+
 		/* pwd 수정 라벨 */
 		JLabel label2 = new JLabel("pwd 수정");
 		label2.setForeground(new Color(0, 0, 128));
 		label2.setFont(new Font("휴먼고딕", Font.PLAIN, 20));
 		label2.setBounds(550, 90, 180, 25);
 		this.add(label2);
-		
+
 		/* 이름 라벨 */
 		JLabel label = new JLabel("이름을 입력해주세요 ");
 		label.setForeground(new Color(0, 0, 128));
 		label.setFont(new Font("휴먼고딕", Font.PLAIN, 15));
 		label.setBounds(400, 250, 180, 25);
 		this.add(label);
-		
+
 		/* 뒤로 가기 버튼*/
 		JButton goback = new JButton("");
 		goback.setIcon(new ImageIcon("src/images/2.png"));
 		goback.setBounds(480, 80, 38, 38);
 		this.add(goback);
+
+		/* 뒤로가기 버튼 */
 		goback.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ChangePanel.modifiedToChangeback(mf, modified_1, new Mypage(mf) );
-				
+
 			}
 		});
 
@@ -76,20 +78,20 @@ public class Modified_1 extends JPanel{
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-					
+
 				MemberDTO memberDTO = new MemberDTO();
-				
+
 				ArrayList<MemberDTO> al = new ArrayList<>();
 				al = new MemberDB().checkMethod();
 
 				for(int j = 0; j < al.size(); j++) {
 
 					if(MemberCheck.mem.getName().equals(name.getText())) {
-						
+
 						JOptionPane.showMessageDialog(null,"회원중에 일치하는 이름이 있습니다.");
-						
+
 						ChangePanel.modifiedToChangePwd(mf, modified_1, new ChangePwd(mf), modified_1);
-						
+
 						return;
 
 					}else {
@@ -104,18 +106,8 @@ public class Modified_1 extends JPanel{
 		});
 
 
-
-
-
-
-
 		mf.getContentPane().add(modified_1);
 
-
-
-
 	}
-
-
 
 }

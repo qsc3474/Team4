@@ -13,8 +13,6 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//import com.greedy.section03.filterstream.MyOutputStream;
-//import com.greedy.section03.filterstream.DTO.MemberDTO;
 
 public class MemberDB {
 
@@ -25,24 +23,21 @@ public class MemberDB {
 
 		/* 회원 정보를 파일로 저장하기 위한 출력 */
 		
-//		Register register = new Register();
-//		register.regi
-//		ArrayList<MemberDTO> outputMembers = register_DB;
+		ArrayList<MemberDTO> outputMembers = register_DB;
 
-//		outputMembers.add(memberinfo);
 		ObjectOutputStream objOut = null;
 
 		try {
 
-			if (new File("src/swing_ys/memberDB.txt").exists()) {
+			if (new File("src/newSwing_ys/memberDB.txt").exists()) {
 				/* 기존에 파일이 있을 경우 */
 				objOut = new MyOutputStream(
-						new BufferedOutputStream(new FileOutputStream("src/swing_ys/memberDB.txt", true)));
+						new BufferedOutputStream(new FileOutputStream("src/newSwing_ys/memberDB.txt", true)));
 
 			} else {
 				/* 기존에 파일이 없을 경우 */
 				objOut = new ObjectOutputStream(
-						new BufferedOutputStream(new FileOutputStream("src/swing_ys/memberDB.txt")));
+						new BufferedOutputStream(new FileOutputStream("src/newSwing_ys/memberDB.txt")));
 			}
 
 			for (int i = 0; i < register_DB.size(); i++) {
@@ -75,7 +70,7 @@ public class MemberDB {
 		ObjectInputStream objIn = null;
 
 		try {
-			objIn = new ObjectInputStream(new BufferedInputStream(new FileInputStream("src/swing_ys/memberDB.txt")));
+			objIn = new ObjectInputStream(new BufferedInputStream(new FileInputStream("src/newSwing_ys/memberDB.txt")));
 
 			while (true) {
 

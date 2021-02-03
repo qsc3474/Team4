@@ -21,8 +21,6 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import newSwing_ys.MemberDB;
-import newSwing_ys.MemberDTO;
 
 public class Mypage extends JPanel{
 
@@ -138,13 +136,6 @@ public class Mypage extends JPanel{
 		});
 		
 		
-		
-						
-			
-			
-			
-		
-		
 		/* id 텍스트필드 */
 		JTextField idTextField = new JTextField(MemberCheck.mem.getId());
 		idTextField.setBounds(544, 102, 330, 45);
@@ -181,11 +172,6 @@ public class Mypage extends JPanel{
 		this.add(dayTextField);
 		this.add(emailTextField);
 		
-		
-		
-		
-		
-	
 		
 		
 		this.add(label);

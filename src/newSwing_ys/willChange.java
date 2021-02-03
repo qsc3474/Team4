@@ -54,9 +54,7 @@ public class willChange extends JPanel{
 					
 					ChangePanel.willchangeToMypage(mf, willchange, new Mypage(mf));
 
-				
-				
-//				ChangePanel.mainToRegisterPanel(mf, mainPanel, new RegisterPanel());
+			
 			}
 
 		});
