@@ -36,6 +36,11 @@ public class ChangePanel {
 		mf.repaint();
 		
 	}
+
+	public static void Mypage(MainFrame mf, JPanel ordermenu, orderComplete orderComplete) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 
