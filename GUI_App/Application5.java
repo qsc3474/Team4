@@ -8,9 +8,7 @@ public class Application5 {
 		
 		new MainFrame();
 		
-		
-		
-
+				
 	}
 
 }
