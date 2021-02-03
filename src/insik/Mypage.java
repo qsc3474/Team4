@@ -23,8 +23,7 @@ public class Mypage extends JPanel{
 
 	private JFrame frame;
 	private MainFrame mf;
-	private Mypage mp;
-	
+	private Mypage mp;	
 	
 	public  Mypage (MainFrame mf) {
 		this.mf = mf;

@@ -22,8 +22,7 @@ public class WithdrawPanel extends JPanel {
 	private MainFrame mf;
 	private WithdrawPanel withdrawPanel;
 	private JTextField idTextField;
-	private JLabel idLabel;
-	
+	private JLabel idLabel;	
 	
 	public WithdrawPanel(MainFrame mf) {
 		setForeground(Color.BLACK);

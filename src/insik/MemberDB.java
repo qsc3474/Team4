@@ -18,6 +18,7 @@ import java.util.Scanner;
 
 public class MemberDB {
 
+	
 	public void insertMember(ArrayList<MemberDTO> register_DB) {	
 		// 받은 회원 정보 (Arraylist) 
 

@@ -7,6 +7,8 @@ import javax.swing.JOptionPane;
 public class MemberCheck {
 
 
+	
+	
 //	ArrayList<MemberDTO> outputMembers = new ArrayList<>();
 //	
 //	

@@ -2,6 +2,7 @@ package insik;
 
 import javax.swing.JPanel;
 
+
 public class ChangePanel {
 
 	
