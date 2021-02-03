@@ -246,7 +246,7 @@ public class orderMenuScreen222 extends JPanel {
 				
 				
 //				OrderCHEC.ameorder(size, temperature, shot);
-				
+				odt.setDrink("아메리카노가 주문되었습니다");
 				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
@@ -257,6 +257,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				odt.setDrink("라떼가 주문되었습니다");
 				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
@@ -265,6 +266,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				odt.setDrink("더치커피가 주문되었습니다");
 				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
@@ -273,6 +275,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				odt.setDrink("모카가 주문되었습니다");
 				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
@@ -281,6 +284,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				odt.setDrink("모히또가 주문되었습니다");
 				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
@@ -289,6 +293,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				odt.setDrink("오렌지가 주문되었습니다");
 				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
@@ -297,6 +302,7 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				odt.setDrink("망고가 주문되었습니다");
 				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
 				}
 			
@@ -305,8 +311,10 @@ public class orderMenuScreen222 extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf));
-				}
+				odt.setDrink("딸기가 주문되었습니다");
+				ChangePanel.ordermenuToOrdercomplete(mf, ordermenu, new orderComplete(mf, odt));
+	
+			}
 				
 			
 			
