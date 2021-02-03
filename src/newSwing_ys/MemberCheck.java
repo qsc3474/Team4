@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 public class MemberCheck {
 
 	static MemberDB memberdb = new MemberDB();
-	ArrayList<MemberDTO> outputMembers = new ArrayList<>();	// 회원정보를 담을 arraylist 생성
+	ArrayList<MemberDTO> withdraw = new ArrayList<>();	// 회원정보를 담을 arraylist 생성
 
 	public static MemberDTO mem = null; 
 
@@ -68,11 +68,12 @@ public class MemberCheck {
 
 	/* 로그인 체크 */
 	public static boolean loginCheck(String id, String pwd) {
-
-
+		
+		ArrayList<MemberDTO> arr = memberdb.checkMethod();
+		
 		boolean islogin = false;
-		for (int i = 0; i < memberdb.checkMethod().size(); i++) {
-			if (id.equals(memberdb.checkMethod().get(i).getId()) && pwd.equals(memberdb.checkMethod().get(i).getPwd())) {
+		for (int i = 0; i < arr.size(); i++) {
+			if (id.equals(arr.get(i).getId()) && pwd.equals(arr.get(i).getPwd())) {
 
 				JOptionPane.showMessageDialog(null, "로그인을 축하합니다.");
 				islogin= true;
@@ -120,57 +121,34 @@ public class MemberCheck {
 		return isBlank;
 	}
 
-	public void withdrawIdCheck (String idcheck, String withdrawCheck) {
+	public boolean withdrawIdCheck (String idcheck, String withdrawCheck) {
 
-		MemberDB memberdb = new MemberDB();
+		boolean iswithdraw = false;
 
 		ArrayList<MemberDTO> withdraw = new ArrayList<>();
 		withdraw = new MemberDB().checkMethod();
-	
-//		if(withdrawCheck.equals("탈퇴") && idcheck ) {
-//			
-//			
-//		}
-		for(int i = 0; i < outputMembers.size(); i ++) {
-			System.out.println("들어가있니" + outputMembers);
+
+		for(int i = 0; i < withdraw.size(); i ++) {
 			
-			if((idcheck.equals(outputMembers.get(i).getId())) && withdrawCheck.equals("탈퇴") ){
+			if((idcheck.equals(withdraw.get(i).getId())) && withdrawCheck.equals("탈퇴") ){
 				
-				outputMembers.remove(i);
+				withdraw.remove(i);
 				
-				JOptionPane.showMessageDialog(null, "으응");
-				System.out.println(outputMembers.toString());
+				memberdb.deleteMember(withdraw);
+				
+				JOptionPane.showMessageDialog(null, "탈퇴가 완료되었습니다.");
+				System.out.println(withdraw.toString());
+				
+				
 				break;
 			}
 			
 			
-			
 		}
 		
+		iswithdraw = true;
 		
+		return iswithdraw;
 		
-		
-		
-//		for (int a = 0; a < outputMembers.size(); a++) {
-//
-//			if (idcheck.equals(outputMembers.get(a).getId()) && withdrawCheck.equals(outputMembers)) {
-//				
-//				
-//				
-//				
-//				outputMembers.remove(a);
-//				JOptionPane.showMessageDialog(null, "탈퇴가 완료되었습니다. 감사합니다.");
-//				//					System.out.println(outputMembers);
-//				break;
-//			}
-//			else {
-//
-//				JOptionPane.showMessageDialog(null, "회원정보가 없습니다.");
-//				break;
-//
-//			}
-//
-//		}
-
 	}
 }

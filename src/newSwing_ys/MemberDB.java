@@ -82,7 +82,7 @@ public class MemberDB {
 
 		} catch (EOFException e) {
 			for (int j = 0; j < inputMembers.size(); j++) {
-				System.out.println("inputmembers: " + inputMembers.get(j));
+				System.out.println("inputmembers : " + inputMembers.get(j));
 			}	// 회원 정보가 입력이 되어 있는지 확인!
 //			System.out.println("파일 읽기 완료");
 		} catch (FileNotFoundException e1) {
@@ -113,6 +113,44 @@ public class MemberDB {
 		}
 		// 리턴해서 inputmembers를 컨트롤로 보낸다.
 		return inputMembers;
+	}
+
+	public void deleteMember(ArrayList<MemberDTO> withdraw) {
+		
+
+		ObjectOutputStream objOut = null;
+
+		try {
+
+			
+				/* 기존에 파일이 없을 경우 */
+				objOut = new ObjectOutputStream(
+						new BufferedOutputStream(new FileOutputStream("src/newSwing_ys/memberDB.txt")));
+			
+
+			for (int i = 0; i < withdraw.size(); i++) {
+
+				objOut.writeObject(withdraw.get(i));
+			}
+
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		} finally {
+			if (objOut != null) {
+				try {
+					objOut.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
 	}
 
 }

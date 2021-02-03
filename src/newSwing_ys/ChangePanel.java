@@ -36,7 +36,7 @@ public class ChangePanel {
 		mf.add(ChangePwd);
 		mf.add(modified_1);
 		
-		mf.remove(mypage);		//remove(리무브)  패널 넘겨받는 
+//		mf.remove(mypage);		//remove(리무브)  패널 넘겨받는 
 		mf.repaint(); 		//repaint리페이지
 	}
 	
@@ -69,7 +69,7 @@ public class ChangePanel {
 		mf.repaint();
 	}
 
-	public static void WithdrawPanelToMyPage(MainFrame mf, WithdrawPanel withdrawPanel, JPanel willChange) {
+	public static void WithdrawPanelToMyPage(MainFrame mf, JPanel withdrawPanel, JPanel willChange) {
 		// TODO Auto-generated method stub
 		mf.add(willChange);
 		mf.remove(withdrawPanel);
@@ -79,7 +79,7 @@ public class ChangePanel {
 	public static void withdrawToMainpanel(MainFrame mf, JPanel withdrawPanel, JPanel mainPanel) {
 		// TODO Auto-generated method stub
 		mf.add(mainPanel);
-		mf.add(withdrawPanel);
+		mf.remove(withdrawPanel);
 		mf.repaint();
 		
 	}

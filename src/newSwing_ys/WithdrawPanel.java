@@ -20,7 +20,7 @@ import javax.swing.border.Border;
 public class WithdrawPanel extends JPanel {
 
 	private MainFrame mf;
-	private WithdrawPanel withdrawPanel;
+	private JPanel withdrawPanel;
 	private JTextField idTextField;
 	private JLabel idLabel;	
 
@@ -97,7 +97,7 @@ public class WithdrawPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				withdrawPanel.setVisible(false);
+//				withdrawPanel.setVisible(false);
 
 				ChangePanel.WithdrawPanelToMyPage(mf, withdrawPanel, new willChange(mf));
 			}
@@ -110,9 +110,14 @@ public class WithdrawPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				memberCheck.withdrawIdCheck(idTextField.getText(), withdrawtext.getText());
+				if(memberCheck.withdrawIdCheck(idTextField.getText(), withdrawtext.getText())) {
+					
+					ChangePanel.withdrawToMainpanel(mf, withdrawPanel, new MainPanel(mf));
+
+					
+				}
+				
 		
-				ChangePanel.withdrawToMainpanel(mf, withdrawPanel, new MainPanel(mf));
 
 
 
