@@ -106,5 +106,18 @@ public class ChangePanel {
 		mf.repaint();
 		
 	}
+	
+	public static void CompleteToOrder(MainFrame mf, JPanel register, JPanel main) {
+		
+		mf.add(register);
+		mf.remove(main);
+		mf.repaint();
+	}
+	
+	public static void CompleteToMypage(MainFrame mf, JPanel orderComplete, JPanel Mypage) {
+		mf.add(Mypage);
+		mf.remove(orderComplete);
+		mf.repaint();
+	}
 
 }

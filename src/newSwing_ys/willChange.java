@@ -72,6 +72,20 @@ public class willChange extends JPanel {
 
 		Button mypage = new Button("My Page");
 		mypage.setBounds(470, 20, 100, 50);
+		
+		
+		mypage.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+	
+				ChangePanel.mainToRegisterPanel(mf, ordermenu , new Mypage(mf));
+				}
+			
+		});
+
+		
+		
 		this.add(mypage);
 
 		Button logout = new Button("Logout");

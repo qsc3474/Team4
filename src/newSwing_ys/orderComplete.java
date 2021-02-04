@@ -7,6 +7,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 
@@ -78,6 +81,18 @@ public class orderComplete extends JPanel {
 	
 		JButton HomeButton = new JButton("홈으로 돌아가기");
 		HomeButton.setBounds(221, 351, 181, 65);
+		HomeButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+	
+				ChangePanel.registerToMain(mf, ordercomplete , new MainPanel(mf));
+				}
+			
+		});
+
+		
+		
 		this.add(HomeButton);
 		
 		
