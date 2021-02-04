@@ -68,9 +68,9 @@ public class MemberCheck {
 
 	/* 로그인 체크 */
 	public static boolean loginCheck(String id, String pwd) {
-		
+
 		ArrayList<MemberDTO> arr = memberdb.checkMethod();
-		
+
 		boolean islogin = false;
 		for (int i = 0; i < arr.size(); i++) {
 			if (id.equals(arr.get(i).getId()) && pwd.equals(arr.get(i).getPwd())) {
@@ -129,26 +129,49 @@ public class MemberCheck {
 		withdraw = new MemberDB().checkMethod();
 
 		for(int i = 0; i < withdraw.size(); i ++) {
-			
+
 			if((idcheck.equals(withdraw.get(i).getId())) && withdrawCheck.equals("탈퇴") ){
-				
+
 				withdraw.remove(i);
-				
+
 				memberdb.deleteMember(withdraw);
-				
+
 				JOptionPane.showMessageDialog(null, "탈퇴가 완료되었습니다.");
 				System.out.println(withdraw.toString());
-				
-				
+
+
 				break;
 			}
-			
-			
+
+
 		}
-		
+
 		iswithdraw = true;
-		
+
 		return iswithdraw;
+
+	}
+
+	public static boolean existedLoginCheck(String id, String pwd) {
+		ArrayList<MemberDTO> arr = memberdb.checkMethod();
 		
+		arr.add(new MemberDTO("user01", "pass01", "pass01", "조영석", "1992", "08", "19", "abc@abc.com"));
+		arr.add(new MemberDTO("user02", "pass02", "pass02", "더조은", "1992", "08", "19", "abc@abc.com"));
+		boolean islogin = false;
+		for (int i = 0; i < arr.size(); i++) {
+			if (id.equals(arr.get(i).getId()) && pwd.equals(arr.get(i).getPwd())) {
+
+				JOptionPane.showMessageDialog(null, "로그인을 축하합니다.");
+				islogin= true;
+
+				mem = memberdb.checkMethod().get(i);
+
+				break;
+			}
+
+		}
+
+		return islogin;
+
 	}
 }

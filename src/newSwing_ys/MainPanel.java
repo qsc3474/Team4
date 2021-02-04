@@ -91,11 +91,16 @@ public class MainPanel extends JPanel{
 
 					ChangePanel.mainToManagerPanel(mf, mainPanel, new ManagerPanel(mf));
 				
-					/* 멤버 로그인 시 */
+					/* 초기 멤버 로그인 시 */
+				}else if(MemberCheck.existedLoginCheck(idtextField.getText(), pwdField.getText())){
+					
+					ChangePanel.mainToRegisterPanel(mf, mainPanel, new willChange(mf));
+					
+					/* 새로운 회원 */
 				}else if(MemberCheck.loginCheck(idtextField.getText(), pwdField.getText())) {
 					ChangePanel.mainToRegisterPanel(mf, mainPanel, new willChange(mf));
 
-				}else {
+				}else{
 					/* 회원가입이 안되어 있는 경우 */
 					JOptionPane.showMessageDialog(null, "회원가입을 해주세요");
 					
