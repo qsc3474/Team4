@@ -14,6 +14,8 @@ public class ChangePanel {
 		
 	}
 	
+	
+	
 	/* 회원가입에서 메인으로 */
 	public static void registerToMain (MainFrame mf, JPanel register, JPanel main) {
 		mf.remove(register);
@@ -89,5 +91,7 @@ public class ChangePanel {
 		mf.remove(mypage);
 		mf.repaint();
 	}
+	
+	
 
 }
