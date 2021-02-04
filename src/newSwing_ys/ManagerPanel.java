@@ -12,11 +12,21 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-
+import javax.swing.JFrame;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableModel;
 
 public class ManagerPanel extends JPanel{
 	private MainFrame mf;
 	private JPanel ManagerPanel;
+
+	private JFrame frame;
+	private JTable table;
+	private JTextField textField;
+	private JLabel lblNewLabel_1;
 	
 	public ManagerPanel(MainFrame mf) {
 		this.mf = mf;
@@ -43,6 +53,30 @@ public class ManagerPanel extends JPanel{
 		this.add(registerBtn);
 		this.add(backButton);
 		
-
+		
+		
+		//표
+		table = new JTable();
+		table.setToolTipText("");
+		table.setModel(new DefaultTableModel(
+				new Object[][] {
+					{"\uC81C\uD488", "\uC0AC\uC774\uC988", "\uAC00\uACA9", "가격", "옵션"},
+					{null, null, null, null, null},
+					{null, null, null, null, null},
+					{null, null, null, null, null},
+					{null, null, null, null, null},
+					{null, null, null, null, null},
+					{null, null, null, null, null},
+					{null, null, null, null, null},
+					{null, null, null, null, null},
+					{null, null, null, null, null},
+				},
+				new String[] {
+					"New column", "New column", "New column", "New column", "New column"
+				}
+			));
+		
+		this.add(table);
+		table.setBounds(116, 143, 376, 161);
 		}
 	}
