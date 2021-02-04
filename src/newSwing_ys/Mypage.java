@@ -131,7 +131,7 @@ public class Mypage extends JPanel{
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				ChangePanel.modifiedToMain(mf, mypage, new willChange(mf)); 
+				ChangePanel.registerToMain(mf, mypage, new willChange(mf)); 
 			}
 		});
 		
