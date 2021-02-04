@@ -101,11 +101,13 @@ public class ChangePwd extends JPanel{
 
 				for(int j = 0; j < changepwd.size(); j++) {
 
-					if(pwdfild2.getText().equals(pwdfild3.getText())) {
+					if(pwdfild2.getText().equals(pwdfild3.getText()) && changepwd.get(j).getPwd().equals(MemberCheck.mem.getPwd())) {
 						JOptionPane.showMessageDialog(null,"비밀번호를 성공적으로 변경되었습니다." );
+						
 						changepwd.get(j).setPwd(pwdfild3.getText());
-						mDB.insertMember(changepwd);
-//						mDB.changeMember(changepwd);
+//						MemberCheck.mem.setPwd(pwdfild3.getText());
+//						mDB.insertMember(changepwd);
+						mDB.changeMember(changepwd);
 						ChangePanel.modifiedToChangePwd(mf, changePwd, new MainPanel(mf)); 
 						break;
 					}else if(!pwdfild2.getText().equals(pwdfild3.getText())){

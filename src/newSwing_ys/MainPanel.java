@@ -35,7 +35,7 @@ public class MainPanel extends JPanel{
 
 		this.setLayout(null);
 
-		//기본 화면
+		// 기본 화면
 
 		/* 아이디 text */
 		JTextField idtextField = new JTextField();
@@ -54,7 +54,6 @@ public class MainPanel extends JPanel{
 		pwdLabel.setFont(new Font("굴림체", Font.BOLD, 19));
 		pwdLabel.setBounds(334, 335, 98, 39);
 
-
 		/* 로그인 버튼 */
 		JButton loginButton = new JButton("로그인");		
 		loginButton.setHorizontalAlignment(SwingConstants.CENTER);
@@ -66,7 +65,6 @@ public class MainPanel extends JPanel{
 		registerButton.setHorizontalAlignment(SwingConstants.CENTER);
 		registerButton.setBounds(330, 450, 370, 45);
 		registerButton.setFont(new Font("굴림", Font.BOLD, 20));
-
 
 		pwdField = new JPasswordField();
 		pwdField.setBounds(463, 335, 237, 33);
@@ -82,10 +80,6 @@ public class MainPanel extends JPanel{
 		JPanel panel = new JPanel();
 		panel.setBounds(269, 181, 481, 404);
 		add(panel);
-
-
-
-
 
 		/* 로그인 버튼 */
 		loginButton.addActionListener(new ActionListener() {
