@@ -78,5 +78,6 @@ public class ManagerPanel extends JPanel{
 		
 		this.add(table);
 		table.setBounds(116, 143, 376, 161);
+		
 		}
 	}

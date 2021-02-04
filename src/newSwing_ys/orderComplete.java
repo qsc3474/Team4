@@ -80,7 +80,7 @@ public class orderComplete extends JPanel {
 		
 	
 		JButton HomeButton = new JButton("홈으로 돌아가기");
-		HomeButton.setBounds(221, 351, 181, 65);
+		HomeButton.setBounds(221, 416, 181, 65);
 		HomeButton.addActionListener(new ActionListener() {
 			
 			@Override
@@ -89,12 +89,22 @@ public class orderComplete extends JPanel {
 				ChangePanel.registerToMain(mf, ordercomplete , new MainPanel(mf));
 				}
 			
-		});
-
-		
-		
+		});	
 		this.add(HomeButton);
-		
+	
+		JButton ReOrder = new JButton("계속 주문하기");
+		ReOrder.setBounds(221, 351, 181, 65);
+		ReOrder.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+	
+				ChangePanel.registerToMain(mf, ordercomplete , new willChange(mf));
+				}
+			
+		});	
+		this.add(ReOrder);
+	
 		
 		mf.add(ordercomplete);
 	}
