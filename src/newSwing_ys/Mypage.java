@@ -94,7 +94,7 @@ public class Mypage extends JPanel{
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				ChangePanel.modifiedToChangePwd(mf, mypage, new Modified_1(mf), mypage); 
+				ChangePanel.modifiedToChangePwd(mf, mypage, new Modified_1(mf)); 
 			}
 		});
 		
@@ -131,7 +131,7 @@ public class Mypage extends JPanel{
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				ChangePanel.modifiedToChangePwd(mf, mypage, new MainPanel(mf), mypage); 
+				ChangePanel.modifiedToMain(mf, mypage, new willChange(mf)); 
 			}
 		});
 		

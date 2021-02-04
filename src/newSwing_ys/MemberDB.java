@@ -17,12 +17,12 @@ import java.util.Scanner;
 public class MemberDB {
 
 
-	
+
 	public void insertMember(ArrayList<MemberDTO> register_DB) {	
 		// 받은 회원 정보 (Arraylist) 
 
 		/* 회원 정보를 파일로 저장하기 위한 출력 */
-		
+
 		ArrayList<MemberDTO> outputMembers = register_DB;
 
 		ObjectOutputStream objOut = null;
@@ -84,7 +84,7 @@ public class MemberDB {
 			for (int j = 0; j < inputMembers.size(); j++) {
 				System.out.println("inputmembers : " + inputMembers.get(j));
 			}	// 회원 정보가 입력이 되어 있는지 확인!
-//			System.out.println("파일 읽기 완료");
+			//			System.out.println("파일 읽기 완료");
 		} catch (FileNotFoundException e1) {
 
 			System.out.println("파일 못찾음");
@@ -116,17 +116,17 @@ public class MemberDB {
 	}
 
 	public void deleteMember(ArrayList<MemberDTO> withdraw) {
-		
+
 
 		ObjectOutputStream objOut = null;
 
 		try {
 
-			
-				/* 기존에 파일이 없을 경우 */
-				objOut = new ObjectOutputStream(
-						new BufferedOutputStream(new FileOutputStream("src/newSwing_ys/memberDB.txt")));
-			
+
+			/* 기존에 파일이 없을 경우 */
+			objOut = new ObjectOutputStream(
+					new BufferedOutputStream(new FileOutputStream("src/newSwing_ys/memberDB.txt")));
+
 
 			for (int i = 0; i < withdraw.size(); i++) {
 
@@ -150,7 +150,45 @@ public class MemberDB {
 				}
 			}
 		}
-		
+
 	}
 
+	public void changeMember(ArrayList<MemberDTO> al) {
+
+
+		ObjectOutputStream objOut = null;
+
+		try {
+
+			/* 기존에 파일이 없을 경우 */
+			objOut = new ObjectOutputStream(
+					new BufferedOutputStream(new FileOutputStream("src/newSwing_ys/memberDB.txt")));
+
+
+			for (int i = 0; i < al.size(); i++) {
+
+				objOut.writeObject(al.get(i));
+			}
+
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		} finally {
+			if (objOut != null) {
+				try {
+					objOut.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}	
 }
+
+

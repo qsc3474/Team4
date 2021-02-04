@@ -37,6 +37,8 @@ public class ChangePwd extends JPanel{
 		this.changePwd = this;
 		this.setSize(1500, 700);
 		this.setLayout(null);
+		
+		 MemberDB memberdb = new MemberDB();
 
 		/* pwd 라벨 */
 		JLabel pwdlabel = new JLabel("pwd 수정");
@@ -94,18 +96,18 @@ public class ChangePwd extends JPanel{
 			public void actionPerformed(ActionEvent e) {
 			
 				MemberDB mDB = new MemberDB();	
-				MemberDTO memberDTO = new MemberDTO();
-				ArrayList<MemberDTO> al = new ArrayList<>();
-				al = new MemberDB().checkMethod();
+				ArrayList<MemberDTO> changepwd = new ArrayList<>();
+				changepwd = new MemberDB().checkMethod();
 
-				for(int j = 0; j < al.size(); j++) {
+				for(int j = 0; j < changepwd.size(); j++) {
 
 					if(pwdfild2.getText().equals(pwdfild3.getText())) {
 						JOptionPane.showMessageDialog(null,"비밀번호를 성공적으로 변경되었습니다." );
-						al.get(j).setPwd(pwdfild3.getText());
-						mDB.insertMember(al);
-						ChangePanel.modifiedToChangePwd(mf, changePwd, new MainPanel(mf), changePwd); 
-						return;
+						changepwd.get(j).setPwd(pwdfild3.getText());
+//						mDB.insertMember(al);
+						mDB.changeMember(changepwd);
+						ChangePanel.modifiedToChangePwd(mf, changePwd, new MainPanel(mf)); 
+						break;
 					}else if(!pwdfild2.getText().equals(pwdfild3.getText())){
 						JOptionPane.showMessageDialog(null,"비밀번호의 값이 다릅니다. 다시 입력해주세요.");
 						return;

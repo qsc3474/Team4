@@ -90,7 +90,7 @@ public class Modified_1 extends JPanel{
 
 						JOptionPane.showMessageDialog(null,"회원중에 일치하는 이름이 있습니다.");
 
-						ChangePanel.modifiedToChangePwd(mf, modified_1, new ChangePwd(mf), modified_1);
+						ChangePanel.modifiedToChangePwd(mf, modified_1, new ChangePwd(mf));
 
 						return;
 
