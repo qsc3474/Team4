@@ -98,5 +98,13 @@ public class ChangePanel {
 		mf.repaint();
 		
 	}
+	public static void mainToLogout(MainFrame mf, JPanel register, JPanel main) {
+		// TODO Auto-generated method stub
+		
+		mf.add(register);
+		mf.remove(main);
+		mf.repaint();
+		
+	}
 
 }

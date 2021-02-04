@@ -76,6 +76,17 @@ public class willChange extends JPanel {
 
 		Button logout = new Button("Logout");
 		logout.setBounds(470, 70, 100, 50);
+		
+		logout.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+	
+				ChangePanel.registerToMain(mf, ordermenu , new MainPanel(mf));
+				}
+			
+		});
+		
 		this.add(logout);
 		
 		JButton btn1 = new JButton("주문");
