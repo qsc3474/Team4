@@ -58,8 +58,8 @@ private Image img;
 		
 		JLabel label = new JLabel("My page");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("굴림", Font.PLAIN, 25));
-		label.setBounds(660, 85, 98, 45);
+		label.setFont(new Font("굴림", Font.BOLD, 40));
+		label.setBounds(630, 85, 180, 45);
 		
 		/* id 라벨 */
 		JLabel idlabel = new JLabel("아이디");
@@ -112,7 +112,7 @@ private Image img;
 		/* 회원탈퇴 버튼 */
 		JButton hoewontaltoeibut = new JButton("회원탈퇴");
 		hoewontaltoeibut.setHorizontalAlignment(SwingConstants.CENTER);
-		hoewontaltoeibut.setBounds(660, 650, 100, 40);
+		hoewontaltoeibut.setBounds(500, 650, 475, 40);
 		hoewontaltoeibut.setFont(new Font("굴림", Font.BOLD, 15));
 		
 		/* 수정 버튼 누를시 */
@@ -132,7 +132,7 @@ private Image img;
 		JButton backbut = new JButton("");
 		backbut.setIcon(new ImageIcon("src/images/2.PNG"));
 		backbut.setHorizontalAlignment(SwingConstants.CENTER);
-		backbut.setBounds(394, 25, 38, 38);
+		backbut.setBounds(0, 0, 39, 38);
 		backbut.setFont(new Font("굴림", Font.BOLD, 13));
 		
 		/* 뒤로 가기 누를시 */

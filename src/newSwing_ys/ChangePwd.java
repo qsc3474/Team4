@@ -58,13 +58,13 @@ public class ChangePwd extends JPanel{
 
 		/* pwd 라벨 */
 		JLabel pwdlabel = new JLabel("pwd 수정");
-		pwdlabel.setBounds(580, 150, 180, 60);
-		pwdlabel.setFont(new Font("휴먼고딕", Font.PLAIN, 40));
+		pwdlabel.setBounds(560, 150, 180, 60);
+		pwdlabel.setFont(new Font("휴먼고딕", Font.BOLD, 50));
 
 		/* 뒤로 가기 버튼*/
 		JButton goback = new JButton("");
 		goback.setIcon(new ImageIcon("src/images/2.png"));
-		goback.setBounds(480, 165, 38, 38);
+		goback.setBounds(0, 0, 39, 38);
 		goback.addActionListener(new ActionListener() {
 			
 			@Override
@@ -101,6 +101,7 @@ public class ChangePwd extends JPanel{
 		
 		/* 비밀번호 수정 확인 버튼 */
 		JButton btnNewButton = new JButton("확인");
+		btnNewButton.setBounds(415, 476, 376, 29);
 		btnNewButton.addActionListener(new ActionListener() {
 			
 			@Override

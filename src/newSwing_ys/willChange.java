@@ -204,14 +204,14 @@ public class willChange extends JPanel {
 		this.add(Label8);
 
 		JRadioButton temperature1 = new JRadioButton("HOT");
-		temperature1.setBounds(630, 390, 50, 25);
+		temperature1.setBounds(630, 390, 55, 25);
 		buttonGroup.add(temperature1);
 		this.add(temperature1);
 		temperature1.setHorizontalAlignment(SwingConstants.CENTER);
 		this.add(temperature1);
 
 		JRadioButton temperature2 = new JRadioButton("ICED");
-		temperature2.setBounds(680, 390, 60, 25);
+		temperature2.setBounds(690, 390, 60, 25);
 		buttonGroup.add(temperature2);
 		this.add(temperature2);
 		temperature2.setHorizontalAlignment(SwingConstants.CENTER);

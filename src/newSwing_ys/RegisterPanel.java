@@ -28,6 +28,7 @@ public class RegisterPanel extends JPanel{
 	private JTextField EmailTextField;
 	private JTextField yearTextField;
 	private Image img;
+	
 	public RegisterPanel(Image img) {
 		this.img = img;
 		this.setSize(new Dimension(img.getWidth(null),img.getHeight(null)));
@@ -84,7 +85,7 @@ public class RegisterPanel extends JPanel{
 		/* 아이디 중복확인 버튼 */
 		JButton idDoubleCheckbtn = new JButton("중복확인");
 		idDoubleCheckbtn.setFont(new Font("휴먼편지체", Font.BOLD, 15));
-		idDoubleCheckbtn.setBounds(550, 230, 85, 30);
+		idDoubleCheckbtn.setBounds(550, 230, 100, 30);
 
 		/* 이름 입력 및 라벨 */
 		JLabel nameLabel = new JLabel("이름");
@@ -97,18 +98,18 @@ public class RegisterPanel extends JPanel{
 		nametextField.setBounds(320, 580, 230, 30);
 
 		/* 뒤로가기 버튼 */
-		JButton backButton = new JButton("뒤로가기");
+		JButton backButton = new JButton("");
 //		backButton.setForeground(new Color(255, 215, 0));
-//		backButton.setIcon(new ImageIcon("src/images/2.PNG"));
+		backButton.setIcon(new ImageIcon("src/images/2.PNG"));
 		backButton.setFont(new Font("굴림", Font.BOLD | Font.ITALIC, 12));
 //		backButton.setBackground(new Color(255, 215, 0));
-		backButton.setBounds(215, 160, 90, 38);
+	      backButton.setBounds(0, 0, 39, 38);
 
 		/* 회원가입 버튼 */
 		JButton registerBtn = new JButton("회원가입");
 		
 		registerBtn.setFont(new Font("굴림", Font.BOLD, 26));
-		registerBtn.setBounds(550, 650, 150, 30);
+		registerBtn.setBounds(350, 650, 550, 30);
 
 		/* 태어난 년도 */
 		JLabel yearLabel = new JLabel("태어난 년도");

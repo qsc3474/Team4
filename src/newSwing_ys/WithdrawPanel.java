@@ -51,25 +51,27 @@ public class WithdrawPanel extends JPanel {
 
 	      // id 입력 라벨
 	      idLabel = new JLabel("탈퇴하실 회원님의 ID를 입력해주세요. ");
-	      idLabel.setFont(new Font("굴림", Font.BOLD, 17));
-	      idLabel.setBounds(415, 283, 335, 38);
+	      idLabel.setForeground(Color.WHITE);
+	      idLabel.setFont(new Font("굴림", Font.BOLD, 20));
+	      idLabel.setBounds(356, 235, 389, 38);
 	      this.add(idLabel);
 
 	      // id 입력 필드
 	      idTextField = new JTextField();
-	      idTextField.setBounds(415, 331, 376, 29);
+	      idTextField.setBounds(356, 283, 464, 29);
 	      idTextField.setColumns(10);
 	      this.add(idTextField);
 
 	      // 탈퇴 입력 라벨
 	      JLabel withdrawLabel = new JLabel("탈퇴를 원하시면 아래에 '탈퇴'라고 입력해주세요. ");
-	      withdrawLabel.setFont(new Font("굴림", Font.BOLD, 17));
-	      withdrawLabel.setBounds(415, 370, 408, 38);
+	      withdrawLabel.setForeground(Color.WHITE);
+	      withdrawLabel.setFont(new Font("굴림", Font.BOLD, 20));
+	      withdrawLabel.setBounds(356, 333, 464, 38);
 	      this.add(withdrawLabel);
 
 	      // 탈퇴 입력 필드
 	      JTextField withdrawtext = new JTextField();
-	      withdrawtext.setBounds(415, 418, 376, 29);
+	      withdrawtext.setBounds(356, 380, 464, 29);
 //	      withdrawPanel.add(withdrawtext);
 	      withdrawtext.setColumns(10);
 	      this.add(withdrawtext);
@@ -86,24 +88,24 @@ public class WithdrawPanel extends JPanel {
 	      JButton withdrawButton = new JButton("탈퇴");
 	      withdrawButton.setFont(new Font("굴림", Font.BOLD, 16));
 	      withdrawButton.setForeground(Color.RED);
-	      withdrawButton.setBounds(415, 476, 376, 29);
+	      withdrawButton.setBounds(356, 476, 464, 29);
 	      withdrawPanel.add(withdrawButton);
 	      withdrawPanel.add(withdrawLabel);
 	      this.add(withdrawButton);
 	      
 	      // 안내사항 라벨
 	      JLabel infoLabel = new JLabel(" * 계정 탈퇴 시 삭제된 정보는 복구가 불가능합니다.");
-	      infoLabel.setForeground(Color.RED);
-	      infoLabel.setFont(new Font("굴림", Font.BOLD, 16));
-	      infoLabel.setBounds(415, 515, 389, 38);
+	      infoLabel.setForeground(Color.YELLOW);
+	      infoLabel.setFont(new Font("굴림", Font.BOLD, 19));
+	      infoLabel.setBounds(356, 519, 481, 38);
 	      add(infoLabel);
 	      
 	      // 화면 상단 회원 탈퇴 라벨
 	      JLabel lblNewLabel = new JLabel("회원 탈퇴");
 	      lblNewLabel.setBackground(new Color(0, 0, 0));
-	      lblNewLabel.setForeground(new Color(245, 245, 245));
+	      lblNewLabel.setForeground(Color.BLACK);
 	      lblNewLabel.setFont(new Font("굴림", Font.PLAIN, 55));
-	      lblNewLabel.setBounds(462, 73, 276, 97);
+	      lblNewLabel.setBounds(462, 71, 276, 97);
 	      add(lblNewLabel);
 	      
 	      
