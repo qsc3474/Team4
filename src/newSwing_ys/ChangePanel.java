@@ -67,9 +67,9 @@ public class ChangePanel {
 		mf.repaint();
 	}
 
-	public static void WithdrawPanelToMyPage(MainFrame mf, JPanel withdrawPanel, JPanel willChange) {
+	public static void withdrawPanelToMyPage(MainFrame mf, JPanel withdrawPanel, JPanel mypage) {
 		// TODO Auto-generated method stub
-		mf.add(willChange);
+		mf.add(mypage);
 		mf.remove(withdrawPanel);
 		mf.repaint();
 	}

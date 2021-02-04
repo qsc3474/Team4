@@ -117,7 +117,7 @@ public class WithdrawPanel extends JPanel {
 
 //	            withdrawPanel.setVisible(false);
 
-	            ChangePanel.WithdrawPanelToMyPage(mf, withdrawPanel, new willChange(mf));
+	            ChangePanel.withdrawPanelToMyPage(mf, withdrawPanel, new Mypage(mf));
 	         }
 	      });
 
