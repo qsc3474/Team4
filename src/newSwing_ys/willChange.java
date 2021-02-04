@@ -33,7 +33,7 @@ public class willChange extends JPanel {
 		this.setSize(1200, 700);
 		
 		frame = new JFrame();
-		frame.setVisible(true);
+//		frame.setVisible(true);
 //		frame.setBounds(100, 100, 600, 500);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
