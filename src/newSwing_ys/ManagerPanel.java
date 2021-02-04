@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 public class ManagerPanel extends JPanel{
 	private MainFrame mf;
 	private JPanel ManagerPanel;
-
+	private JPanel ordercomplete;
 	private JFrame frame;
 	private JTable table;
 	private JTextField textField;
@@ -40,17 +40,27 @@ public class ManagerPanel extends JPanel{
 		/* 뒤로가기 버튼 */
 		JButton backButton = new JButton("뒤로가기");
 		backButton.setBounds(702, 23, 86, 34);
+		backButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+	
+				ChangePanel.registerToMain(mf, ManagerPanel , new MainPanel(mf));
+				}
+			
+		});	
+		
 		
 		/* 회원가입 버튼 */
-		JButton registerBtn = new JButton("회원가입");
-		registerBtn.setBounds(445, 557, 319, 62);
+//		JButton registerBtn = new JButton("회원가입");
+//		registerBtn.setBounds(445, 557, 319, 62);
 
 		JLabel lblNewLabel = new JLabel("매니져페이지");
 		lblNewLabel.setBounds(110, 89, 327, 76);
 		
 
 		this.add(lblNewLabel);
-		this.add(registerBtn);
+//		this.add(registerBtn);
 		this.add(backButton);
 		
 		
