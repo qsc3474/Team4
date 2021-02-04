@@ -188,7 +188,7 @@ public class orderMenuScreen222 extends JPanel {
 		this.add(Label11);
 
 		JRadioButton buttonYes = new JRadioButton("YES");
-		buttonYes.setBounds(120, 100, 49, 23);
+		buttonYes.setBounds(120, 100, 60, 23);
 		buttonGroup.add(buttonYes);
 		this.add(buttonYes);
 		buttonYes.setHorizontalAlignment(SwingConstants.CENTER);
@@ -229,8 +229,8 @@ public class orderMenuScreen222 extends JPanel {
 		
 		
 		JPanel resultPanel = new JPanel();
-		JLabel text = new JLabel("테스트 출력용");
-		resultPanel.add(text);
+//		JLabel text = new JLabel("테스트 출력용");
+//		resultPanel.add(text);
 		mf.add(resultPanel, "South");
 		
 
@@ -324,7 +324,7 @@ public class orderMenuScreen222 extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				text.setText("Small size가 선택되었습니다.");
+//				text.setText("Small size가 선택되었습니다.");
 				odt.setSize("Small size가 선택되었습니다.");
 			}
 		});
@@ -333,7 +333,7 @@ public class orderMenuScreen222 extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				text.setText("Medium size가 선택되었습니다.");
+//				text.setText("Medium size가 선택되었습니다.");
 				odt.setSize("Medium size가 선택되었습니다.");
 			}
 		});
@@ -343,7 +343,7 @@ public class orderMenuScreen222 extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				odt.setSize("Large size가 선택되었습니다.");
-				text.setText("Large size가 선택되었습니다.");
+//				text.setText("Large size가 선택되었습니다.");
 	
 			}
 		});
@@ -352,7 +352,7 @@ public class orderMenuScreen222 extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				text.setText("HOT 입니다.");
+//				text.setText("HOT 입니다.");
 				odt.setTemperature("HOT 입니다.");
 			}
 		});
@@ -361,7 +361,7 @@ public class orderMenuScreen222 extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				text.setText("ICED 입니다.");
+//				text.setText("ICED 입니다.");
 				odt.setTemperature("ICED 입니다.");
 			}
 		});
@@ -370,7 +370,7 @@ public class orderMenuScreen222 extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				text.setText("Shot 추가 No 입니다.");
+//				text.setText("Shot 추가 No 입니다.");
 				odt.setShot("NO 입니다.");
 			}
 		});
@@ -379,7 +379,7 @@ public class orderMenuScreen222 extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				text.setText("Shot 추가 Yes입니다");
+//				text.setText("Shot 추가 Yes입니다");
 				odt.setShot("YES 입니다.");
 			}
 		});
