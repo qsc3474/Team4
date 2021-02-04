@@ -8,7 +8,7 @@ public class MainFrame extends JFrame{
 
 
 		this.setBounds(150, 50, 1290, 870);
-		
+		this.setTitle("커피한잔의 여유");
 		
 		new MainPanel(this);
 		

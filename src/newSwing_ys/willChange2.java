@@ -26,7 +26,7 @@ public class willChange2 extends JPanel{
 	public willChange2 (MainFrame mf) {
 		this.mf = mf;
 		this.willchange = this;
-		this.setSize(1000, 700);
+		this.setSize(1280, 853);
 
 		this.setLayout(null);
 
