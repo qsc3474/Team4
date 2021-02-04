@@ -1,7 +1,10 @@
 package newSwing_ys;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -23,32 +26,43 @@ public class Modified_1 extends JPanel{
 
 	private MainFrame mf;
 	public JPanel modified_1;
+	private Image img;
+	public Modified_1(Image img) {
+		this.img = img;
+		this.setSize(new Dimension(img.getWidth(null),img.getHeight(null)));
+		this.setPreferredSize(new Dimension(img.getWidth(null),img.getHeight(null)));
+		
+	}
+
+
+	public void paintComponent(Graphics g) {
+		g.drawImage(img, 0 , 0 , null );
+	}
 
 	public Modified_1(MainFrame mf) {
 		this.mf = mf;
 		this.modified_1 = this;		
-		this.setSize(1000, 700);
+		this.setSize(1280, 853);
 		this.setLayout(null);
+		Modified_1 panel = new Modified_1(new ImageIcon("src/images/coffee4.jpg").getImage());
 
 		/* pwd 수정 라벨 */
 		JLabel label2 = new JLabel("pwd 수정");
-		label2.setForeground(new Color(0, 0, 128));
 		label2.setFont(new Font("휴먼고딕", Font.PLAIN, 20));
-		label2.setBounds(550, 90, 180, 25);
-		this.add(label2);
+		label2.setBounds(550, 270, 180, 25);
+		
 
 		/* 이름 라벨 */
 		JLabel label = new JLabel("이름을 입력해주세요 ");
-		label.setForeground(new Color(0, 0, 128));
 		label.setFont(new Font("휴먼고딕", Font.PLAIN, 15));
-		label.setBounds(400, 250, 180, 25);
-		this.add(label);
+		label.setBounds(400, 400, 180, 25);
+		
 
 		/* 뒤로 가기 버튼*/
 		JButton goback = new JButton("");
 		goback.setIcon(new ImageIcon("src/images/2.png"));
-		goback.setBounds(480, 80, 38, 38);
-		this.add(goback);
+		goback.setBounds(480, 260, 38, 38);
+		
 
 		/* 뒤로가기 버튼 */
 		goback.addActionListener(new ActionListener() {
@@ -62,16 +76,14 @@ public class Modified_1 extends JPanel{
 
 		/* 이름 적는 필드 */
 		JTextField name = new JTextField();
-		name.setForeground(new Color(0, 0, 128));
-		name.setBounds(600, 250, 200, 25);
+		name.setBounds(600, 400, 200, 25);
 		this.add(name);
 
 		/* 확인 버튼 */
 		JButton confirmBtn = new JButton("확인");
-		confirmBtn.setBackground(new Color(0, 0, 128));
-		confirmBtn.setForeground(new Color(255, 255, 255));
-		confirmBtn.setBounds(550, 425, 65, 25);
-		this.add(confirmBtn);
+//		confirmBtn.setForeground(new Color(255, 255, 255));
+		confirmBtn.setBounds(550, 500, 65, 25);
+		
 
 		/* 확인버튼 눌렀을 때 */
 		confirmBtn.addActionListener(new ActionListener() {
@@ -104,8 +116,13 @@ public class Modified_1 extends JPanel{
 
 			}
 		});
+		this.add(confirmBtn);
+		this.add(goback);
+		this.add(label2);
+		this.add(label);
 
-
+		
+		this.add(panel);
 		mf.getContentPane().add(modified_1);
 
 	}

@@ -1,7 +1,10 @@
 package newSwing_ys;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -24,117 +27,129 @@ public class RegisterPanel extends JPanel{
 	private JTextField dayTextField;
 	private JTextField EmailTextField;
 	private JTextField yearTextField;
+	private Image img;
+	public RegisterPanel(Image img) {
+		this.img = img;
+		this.setSize(new Dimension(img.getWidth(null),img.getHeight(null)));
+		this.setPreferredSize(new Dimension(img.getWidth(null),img.getHeight(null)));
+		this.setLayout(null);
+	}
+
+
+	public void paintComponent(Graphics g) {
+		g.drawImage(img, 0 , 0 , null );
+	}
 	
 	public RegisterPanel(MainFrame mf) {
 		this.mf = mf;
 		this.registerPanel = this;
+		RegisterPanel panel = new RegisterPanel(new ImageIcon("src/images/coffee7.jpg").getImage());
 		this.setBackground(new Color(255, 215, 0));
 		
 		MemberCheck memberCheck = new MemberCheck();
 
 
 		this.setLayout(null);
-		this.setSize(1200, 700);
+		this.setSize(1280, 853);
 
 		/* 아이디 입력 및 라벨 */
 		JTextField idtextField = new JTextField();
-		idtextField.setBounds(145, 119, 311, 34);
+		idtextField.setBounds(320, 230, 230, 30);
 		idtextField.setColumns(10);
 
 		JLabel idLabel = new JLabel("아이디");
 		idLabel.setFont(new Font("Dialog", Font.BOLD, 16));
 		idLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		idLabel.setBounds(20, 109, 72, 48);
+		idLabel.setBounds(215, 220, 72, 48);
 
 		/* 비밀번호 입력 및 라벨 */
 		JPasswordField pwdField = new JPasswordField();
-		pwdField.setBounds(145, 212, 311, 34);
+		pwdField.setBounds(320, 340, 230, 30);
 
 		JLabel pwdLabel = new JLabel("비밀번호");
 		pwdLabel.setFont(new Font("굴림", Font.BOLD, 16));
 		pwdLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		pwdLabel.setBounds(12, 210, 92, 34);
+		pwdLabel.setBounds(210, 340, 92, 34);
 
 		/* 비밀번호 확인 입력 및 라벨 */
 		JPasswordField pwdDoubleCheckField = new JPasswordField();
-		pwdDoubleCheckField.setBounds(145, 327, 311, 34);
+		pwdDoubleCheckField.setBounds(320, 460, 230, 30);
 
-		JLabel pwdDoubleCheckLabel = new JLabel("비밀번호 확인");
+		JLabel pwdDoubleCheckLabel = new JLabel("비밀번호확인");
 		pwdDoubleCheckLabel.setFont(new Font("굴림", Font.BOLD, 16));
 		pwdDoubleCheckLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		pwdDoubleCheckLabel.setBounds(12, 325, 121, 35);
+		pwdDoubleCheckLabel.setBounds(200, 460, 121, 35);
 
 
 		/* 아이디 중복확인 버튼 */
 		JButton idDoubleCheckbtn = new JButton("중복확인");
-		idDoubleCheckbtn.setFont(new Font("휴먼편지체", Font.BOLD, 17));
-		idDoubleCheckbtn.setBounds(469, 116, 103, 35);
+		idDoubleCheckbtn.setFont(new Font("휴먼편지체", Font.BOLD, 15));
+		idDoubleCheckbtn.setBounds(550, 230, 85, 30);
 
 		/* 이름 입력 및 라벨 */
 		JLabel nameLabel = new JLabel("이름");
 		nameLabel.setFont(new Font("굴림", Font.BOLD, 16));
 		nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		nameLabel.setBounds(20, 423, 76, 48);
+		nameLabel.setBounds(220, 570, 76, 48);
 
 		nametextField = new JTextField();
 		nametextField.setColumns(10);
-		nametextField.setBounds(145, 432, 312, 34);
+		nametextField.setBounds(320, 580, 230, 30);
 
 		/* 뒤로가기 버튼 */
 		JButton backButton = new JButton("뒤로가기");
-		backButton.setForeground(new Color(255, 215, 0));
-		backButton.setIcon(new ImageIcon("C:\\Users\\park\\Desktop\\back.PNG"));
-
+//		backButton.setForeground(new Color(255, 215, 0));
+//		backButton.setIcon(new ImageIcon("src/images/2.PNG"));
 		backButton.setFont(new Font("굴림", Font.BOLD | Font.ITALIC, 12));
-		backButton.setBackground(new Color(255, 215, 0));
-		backButton.setBounds(0, 0, 50, 33);
+//		backButton.setBackground(new Color(255, 215, 0));
+		backButton.setBounds(215, 160, 90, 38);
 
 		/* 회원가입 버튼 */
 		JButton registerBtn = new JButton("회원가입");
-		registerBtn.setBackground(new Color(255, 0, 255));
+		
 		registerBtn.setFont(new Font("굴림", Font.BOLD, 26));
-		registerBtn.setBounds(145, 533, 970, 34);
+		registerBtn.setBounds(550, 650, 150, 30);
 
 		/* 태어난 년도 */
 		JLabel yearLabel = new JLabel("태어난 년도");
 		yearLabel.setFont(new Font("굴림", Font.BOLD, 16));
 		yearLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		yearLabel.setBounds(683, 115, 92, 47);
+		yearLabel.setBounds(683, 220, 90, 48);
 
 		yearTextField = new JTextField();
 		yearTextField.setColumns(10);
-		yearTextField.setBounds(804, 123, 311, 34);
+		yearTextField.setBounds(804, 230, 230, 30);
 
 		/* 태어난 월 */
 		JLabel monthLabel = new JLabel("태어난 월");
 		monthLabel.setFont(new Font("굴림", Font.BOLD, 16));
 		monthLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		monthLabel.setBounds(683, 205, 92, 47);
+		monthLabel.setBounds(675, 340, 92, 34);
 
 
 		monthtextField = new JTextField();
-		monthtextField.setBounds(804, 212, 311, 34);
+		monthtextField.setBounds(804, 340, 230, 30);
 		add(monthtextField);
 
 		/* 태어난 일 */
 		dayTextField = new JTextField();
 		dayTextField.setColumns(10);
-		dayTextField.setBounds(804, 328, 311, 34);
+		dayTextField.setBounds(804, 460, 230, 30);
 
 		JLabel dayLabel = new JLabel("태어난 일");
 		dayLabel.setFont(new Font("굴림", Font.BOLD, 16));
 		dayLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		dayLabel.setBounds(683, 320, 92, 47);
+		dayLabel.setBounds(660, 460, 121, 35);
 
 		/* 이메일 주소 */
 		EmailTextField = new JTextField();
 		EmailTextField.setColumns(10);
-		EmailTextField.setBounds(804, 430, 311, 34);
+		EmailTextField.setBounds(804, 580, 230, 30);
 
 		JLabel emailLabel = new JLabel("E-mail");
 		emailLabel.setFont(new Font("굴림", Font.BOLD, 16));
 		emailLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		emailLabel.setBounds(683, 432, 92, 47);
+		emailLabel.setBounds(680, 570, 76, 48);
 
 
 
@@ -209,6 +224,7 @@ public class RegisterPanel extends JPanel{
 		this.add(dayLabel);
 		this.add(dayTextField);
 		this.add(idDoubleCheckbtn);
+		this.add(panel);
 
 	}
 }

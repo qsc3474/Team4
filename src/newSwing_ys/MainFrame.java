@@ -7,7 +7,7 @@ public class MainFrame extends JFrame{
 	public MainFrame() {
 
 
-		this.setBounds(150, 50, 1200, 700);
+		this.setBounds(150, 50, 1290, 870);
 		
 		
 		new MainPanel(this);
