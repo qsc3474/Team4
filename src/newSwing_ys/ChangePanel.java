@@ -5,11 +5,11 @@ import javax.swing.JPanel;
 public class ChangePanel {
 	
 	/* 메인에서 회원가입 */
-	public static void mainToRegisterPanel(MainFrame mf, JPanel main, JPanel willChange) {
+	public static void mainToRegisterPanel(MainFrame mf, JPanel main, JPanel OrderPage) {
 		
 		
 		mf.remove(main);
-		mf.add(willChange);
+		mf.add(OrderPage);
 		mf.repaint();
 		
 	}
@@ -45,9 +45,9 @@ public class ChangePanel {
 		mf.repaint();
 	}
 
-	public static void mainTowillChange(MainFrame mf, JPanel mainPanel, JPanel willchange) {
+	public static void mainToOrderPage(MainFrame mf, JPanel mainPanel, JPanel OrderPage) {
 		// TODO Auto-generated method stub
-		mf.add(willchange);
+		mf.add(OrderPage);
 		mf.remove(mainPanel);
 		mf.repaint();
 	}
