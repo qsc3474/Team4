@@ -142,7 +142,7 @@ private Image img;
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				ChangePanel.registerToMain(mf, mypage, new willChange(mf)); 
+				ChangePanel.registerToMain(mf, mypage, new OrderPage(mf)); 
 			}
 		});
 		
