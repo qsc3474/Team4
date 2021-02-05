@@ -58,8 +58,8 @@ public class ChangePwd extends JPanel{
 
 		/* pwd 라벨 */
 		JLabel pwdlabel = new JLabel("pwd 수정");
-		pwdlabel.setBounds(560, 150, 180, 60);
-		pwdlabel.setFont(new Font("휴먼고딕", Font.BOLD, 50));
+		pwdlabel.setBounds(560, 150, 220, 60);
+		pwdlabel.setFont(new Font("휴먼고딕", Font.PLAIN, 50));
 
 		/* 뒤로 가기 버튼*/
 		JButton goback = new JButton("");
