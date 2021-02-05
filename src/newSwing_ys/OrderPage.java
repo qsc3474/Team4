@@ -120,42 +120,42 @@ public class OrderPage extends JPanel {
 		
 		this.add(logout);
 		
-		JButton btn1 = new JButton("주문");
-		btn1.setBounds(350, 200, 100, 50);
-		btn1.addActionListener(new ActionListener() {
+		JButton buttonAmericano = new JButton("주문");
+		buttonAmericano.setBounds(350, 200, 100, 50);
+		buttonAmericano.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
 		setLayout(null);
-		this.add(btn1);
+		this.add(buttonAmericano);
 		
-		JButton btn2 = new JButton("주문");
-		btn2.setBounds(500, 200, 100, 50);
-		this.add(btn2);
+		JButton buttonLatte = new JButton("주문");
+		buttonLatte.setBounds(500, 200, 100, 50);
+		this.add(buttonLatte);
 
-		JButton btn3 = new JButton("주문");
-		btn3.setBounds(650, 200, 100, 50);
-		this.add(btn3);
+		JButton buttonDutchCoffee = new JButton("주문");
+		buttonDutchCoffee.setBounds(650, 200, 100, 50);
+		this.add(buttonDutchCoffee);
 
-		JButton btn4 = new JButton("주문");
-		btn4.setBounds(800, 200, 100, 50);
-		this.add(btn4);
+		JButton buttonMocha = new JButton("주문");
+		buttonMocha.setBounds(800, 200, 100, 50);
+		this.add(buttonMocha);
 
-		JButton btn5 = new JButton("주문");
-		btn5.setBounds(350, 300, 100, 50);
-		this.add(btn5);
+		JButton buttonMojito = new JButton("주문");
+		buttonMojito.setBounds(350, 300, 100, 50);
+		this.add(buttonMojito);
 
-		JButton btn6 = new JButton("주문");
-		btn6.setBounds(500, 300, 100, 50);
-		this.add(btn6);
+		JButton buttonOrange = new JButton("주문");
+		buttonOrange.setBounds(500, 300, 100, 50);
+		this.add(buttonOrange);
 
-		JButton btn7 = new JButton("주문");
-		btn7.setBounds(650, 300, 100, 50);
-		this.add(btn7);
+		JButton buttonMango = new JButton("주문");
+		buttonMango.setBounds(650, 300, 100, 50);
+		this.add(buttonMango);
 
-		JButton btn8 = new JButton("주문");
-		btn8.setBounds(800, 300, 100, 50);
-		this.add(btn8);
+		JButton buttonStrawberry = new JButton("주문");
+		buttonStrawberry.setBounds(800, 300, 100, 50);
+		this.add(buttonStrawberry);
 		
 		JLabel Label15 = new JLabel("메뉴 주문");
 		Label15.setBounds(470, 60, 300, 100);
@@ -284,7 +284,7 @@ public class OrderPage extends JPanel {
 
 		mf.getContentPane().add(ordermenu);
 		
-		btn1.addActionListener(new ActionListener() {
+		buttonAmericano.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -301,7 +301,7 @@ public class OrderPage extends JPanel {
 		});
 		
 
-		btn2.addActionListener(new ActionListener() {
+		buttonLatte.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -310,7 +310,7 @@ public class OrderPage extends JPanel {
 				}
 			
 		});
-		btn3.addActionListener(new ActionListener() {
+		buttonDutchCoffee.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -319,7 +319,7 @@ public class OrderPage extends JPanel {
 				}
 			
 		});
-		btn4.addActionListener(new ActionListener() {
+		buttonMocha.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -328,7 +328,7 @@ public class OrderPage extends JPanel {
 				}
 			
 		});
-		btn5.addActionListener(new ActionListener() {
+		buttonMojito.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -337,7 +337,7 @@ public class OrderPage extends JPanel {
 				}
 			
 		});
-		btn6.addActionListener(new ActionListener() {
+		buttonOrange.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -346,7 +346,7 @@ public class OrderPage extends JPanel {
 				}
 			
 		});
-		btn7.addActionListener(new ActionListener() {
+		buttonMango.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -355,7 +355,7 @@ public class OrderPage extends JPanel {
 				}
 			
 		});
-		btn8.addActionListener(new ActionListener() {
+		buttonStrawberry.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
