@@ -133,7 +133,7 @@ public class WithdrawPanel extends JPanel {
 	               ChangePanel.withdrawToMainpanel(mf, withdrawPanel, new MainPanel(mf));
 
 	               
-	            }            
+	            }
 	      
 
 

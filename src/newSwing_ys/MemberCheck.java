@@ -122,7 +122,7 @@ public class MemberCheck {
 	   }
 	   
 	   
-
+	   // 전달받은 Id와 '탈퇴'구문 비교
 	   public boolean withdrawIdCheck (String idcheck, String withdrawCheck) {
 
 	      boolean iswithdraw = true;
@@ -143,15 +143,18 @@ public class MemberCheck {
 
 
 	            break;
-	         }else {
-	            
-	            if(idcheck.isBlank() || withdrawCheck.isBlank()) {
+	         }else if(idcheck.isBlank() || withdrawCheck.isBlank()) {
 
 	               JOptionPane.showMessageDialog(null, "정보를 모두 입력해주세요.");
 
 	               iswithdraw = false;
 	               
 	               break;
+	            }else if(!((idcheck.equals(withdraw.get(i).getId())) || withdrawCheck.equals("탈퇴"))){
+		               JOptionPane.showMessageDialog(null, "정보를 정확히 입력해주세요.");
+		               iswithdraw = false;
+		               
+		               break;
 	            }
 
 	            
@@ -160,7 +163,6 @@ public class MemberCheck {
 
 
 
-	   }
 	   
 	      return iswithdraw;
 	}
