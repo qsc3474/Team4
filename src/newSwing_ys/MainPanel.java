@@ -117,7 +117,6 @@ public class MainPanel extends JPanel{
 				}else {
 					/* 회원가입이 안되어 있는 경우 */
 					JOptionPane.showMessageDialog(null, "회원가입을 해주세요");
-					
 				}
 
 			}

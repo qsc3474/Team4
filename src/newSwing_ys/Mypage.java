@@ -167,7 +167,7 @@ private Image img;
 		nameTextField.setEditable(false);	
 		
 		/* 생년월일 텍스트필드 */
-		JTextField dayTextField = new JTextField(MemberCheck.mem.getDay());
+		JTextField dayTextField = new JTextField(MemberCheck.mem.getYear() + MemberCheck.mem.getMonth() +  MemberCheck.mem.getDay());
 		dayTextField.setBounds(585, 410, 330, 45);
 		dayTextField.setColumns(10);
 		dayTextField.setEditable(false);	
