@@ -129,6 +129,7 @@
 //		this.add(Label8);
 //
 //		JRadioButton temperature1 = new JRadioButton("HOT");
+
 //		this.add(temperature1);
 //		temperature1.setHorizontalAlignment(SwingConstants.CENTER);
 //		temperature1.setBounds(90, 386, 51, 23);

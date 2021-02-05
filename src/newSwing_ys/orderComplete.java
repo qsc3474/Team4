@@ -119,7 +119,7 @@ public class orderComplete extends JPanel {
 			
 		});	
 		this.add(ReOrder);
-	
+		mf.setResizable(false);
 		this.add(panel);
 		mf.add(ordercomplete);
 	}
