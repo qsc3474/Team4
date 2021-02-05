@@ -112,7 +112,7 @@ public class MainPanel extends JPanel{
 				
 					/* 멤버 로그인 시 */
 				}else if(MemberCheck.loginCheck(idtextField.getText(), pwdField.getText())) {
-					ChangePanel.mainToRegisterPanel(mf, mainPanel, new willChange(mf));
+					ChangePanel.mainToRegisterPanel(mf, mainPanel, new OrderPage(mf));
 
 				}else {
 					/* 회원가입이 안되어 있는 경우 */

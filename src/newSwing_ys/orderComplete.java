@@ -39,7 +39,7 @@ public class orderComplete extends JPanel {
 		this.mf = mf;
 		this.ordercomplete = this;
 		this.setSize(1280, 853);
-		willChange panel = new willChange(new ImageIcon("src/images/coffee12.jpg").getImage());
+		OrderPage panel = new OrderPage(new ImageIcon("src/images/coffee12.jpg").getImage());
 //		orderMenuScreen222 orderMenu = new orderMenuScreen222(mf);
 		
 		JLabel Label1 = new JLabel("1석 4조 커피");
@@ -114,7 +114,7 @@ public class orderComplete extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 	
-				ChangePanel.registerToMain(mf, ordercomplete , new willChange(mf));
+				ChangePanel.registerToMain(mf, ordercomplete , new OrderPage(mf));
 				}
 			
 		});	

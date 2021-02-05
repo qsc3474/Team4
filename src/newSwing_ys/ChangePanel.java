@@ -38,6 +38,7 @@ public class ChangePanel {
 		mf.repaint(); 		//repaint리페이지
 	}
 	
+	
 	public static void modifiedToChangeback(MainFrame mf, JPanel changePwd, JPanel mypage) {
 		mf.add(mypage);
 		mf.remove(changePwd);	

@@ -22,7 +22,7 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
-public class willChange extends JPanel {
+public class OrderPage extends JPanel {
 
 	private JFrame frame;
 	private MainFrame mf;
@@ -30,7 +30,7 @@ public class willChange extends JPanel {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private OrderDTO2 odt = new OrderDTO2(); 
 	private Image img;
-	public willChange(Image img) {
+	public OrderPage(Image img) {
 		this.img = img;
 		this.setSize(new Dimension(img.getWidth(null),img.getHeight(null)));
 		this.setPreferredSize(new Dimension(img.getWidth(null),img.getHeight(null)));
@@ -43,21 +43,21 @@ public class willChange extends JPanel {
 	}
 
 
-	public  willChange (MainFrame mf) {
+	public  OrderPage (MainFrame mf) {
 //		frame.setBounds(100, 100, 600, 500);
 		this.mf = mf;
 		this.ordermenu = this;
 		this.setSize(1280, 853);
 		
-		frame = new JFrame();
-//		frame.setVisible(true);
-//		frame.setBounds(100, 100, 600, 500);
-		frame.setResizable(false);
-		frame.setLocationRelativeTo(null);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+//		frame = new JFrame();
+////		frame.setVisible(true);
+////		frame.setBounds(100, 100, 600, 500);
+//		frame.setResizable(false);
+//		frame.setLocationRelativeTo(null);
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.getContentPane().setLayout(null);
 
-		willChange panel = new willChange(new ImageIcon("src/images/coffee13.jpg").getImage());
+		OrderPage panel = new OrderPage(new ImageIcon("src/images/coffee13.jpg").getImage());
         
 	
 
@@ -68,7 +68,7 @@ public class willChange extends JPanel {
 		sizeS.setBounds(630, 430, 33, 23);
 		buttonGroup.add(sizeS);
 		sizeS.setHorizontalAlignment(SwingConstants.CENTER);
-		this.add(sizeS);
+//		this.add(sizeS);
 
 		this.add(sizeS);
 
@@ -78,14 +78,14 @@ public class willChange extends JPanel {
 		buttonGroup.add(sizeM);
 		this.add(sizeM);
 		sizeM.setHorizontalAlignment(SwingConstants.CENTER);
-		this.add(sizeM);
+//		this.add(sizeM);
 
 		JRadioButton sizeL = new JRadioButton("L");
 		sizeL.setBounds(710, 430, 33, 23);
 		buttonGroup.add(sizeL);
 		this.add(sizeL);
 		sizeL.setHorizontalAlignment(SwingConstants.CENTER);
-		this.add(sizeL);
+//		this.add(sizeL);
 
 		Button mypage = new Button("My Page");
 		mypage.setBounds(1000, 20, 100, 40);
